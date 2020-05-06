@@ -90,7 +90,7 @@ And the most common two-word food terms were:
 You can see that the recipes include both baking and non-baking cooking. They span a wide variety of cooking styles and techniques. They also include cocktail recipes and a detailed set of instructions for setting up a beachside clambake! 
 
 #### Nutrition info
-Each recipe includes nutrition information, but the information is hard to interpret. What are the units? Are the quantities per serving or for the whole recipe? For example, the recipe with the  highest sodium quantity is Lamb Rice Pilaf, with a sodium quantity of 276,000,000. If we assume the units are mg, this is 3 kilograms of sodium, an amount that most people don't have in their pantry.
+Each recipe includes nutrition information, but the information is hard to interpret. What are the units? Are the quantities per serving or for the whole recipe? For example, the recipe with the  highest sodium quantity is Lamb Rice Pilaf, with a sodium quantity of 3,134,853. If we assume the units are mg, this is 3 kilograms of sodium, an amount that most people don't have in their pantry.
 
 After removing unreasonable quantities of sodium, we can see a more reasonable distribution:
 
