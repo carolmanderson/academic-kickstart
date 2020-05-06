@@ -1,7 +1,6 @@
 ---
 # Display name
 name: Carol Anderson
-
 # Username (this should match the folder name)
 authors:
 - carol
@@ -18,8 +17,7 @@ role: Data Scientist
 #  url: "www.ancestry.com"
 
 # Short bio (displayed in user profile at end of posts)
-#bio: My research interests include distributed robotics, mobile computing and 
-# programmable matter.
+# bio: My research interests include distributed robotics, mobile computing and # programmable matter.
 
 interests:
 - Deep Learning
@@ -37,6 +35,8 @@ education:
   - course: B.S.in Chemistry
     institution: Yale University
     year: 1995
+
+
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -70,8 +70,9 @@ email: ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-# user_groups:
-# - Researchers
-# - Visitors
+user_groups:
+- Researchers
+- Visitors
 ---
-I am passionate about using machine learning to unlock meaningful insights. In my current role, I've developed deep-learning-based pipelines to detect, and extract information from, obituaries and marriage announcements in historical newspapers, allowing millions of people to connect with stories about their ancestors. Prior to becoming a data scientist, I was a faculty member in Molecular Biology at Indiana University. 
+
+I am passionate about using machine learning to unlock meaninful insights. In my current role, I've developed deep-learning-based pipelines to detect, and extract information from, obituaries and marriage announcements in historical newspapers, allowing millions of people to connect with stories about their ancestors. Prior to becoming a data scientist, I was a faculty member in Molecular Biology at Indiana University. 
