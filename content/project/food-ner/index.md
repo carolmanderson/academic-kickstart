@@ -100,16 +100,16 @@ The other nutritional values follow a similar pattern — some crazy-high outlie
 
 
 ### Difficult labeling decisions
-You'd think labeling food would be easy, but I faced some hard decisions. Is water food? Sometimes water is an ingredient, but other times it's used almost as a tool, as in "plunge asparagus into boiling water." What about phrases like "egg mixture"? Should "mixture" be considered part of the food item? Or how about the word "slices" in the sentence "Arrange slices on a platter."? These decisions would normally be guided by  a business use case. But here I was just training a model for fun, so these decisions were tough, and a bit arbitrary. 
+You'd think labeling food would be easy, but I faced some hard decisions. Is water food? Sometimes water is an ingredient, but other times it's used almost as a tool, as in "plunge asparagus into boiling water." What about phrases like "egg mixture"? Should "mixture" be considered part of the food item? Or how about the word "slices" in the sentence "Arrange slices on a platter"? These decisions would normally be guided by  a business use case. But here I was just training a model for fun, so these decisions were tough, and a bit arbitrary. 
 
 ## Model Architecture
 As a starting point, I used a simple model with a bidirectional LSTM layer followed by a softmax output layer to predict token labels. I used pretrained GloVe embeddings as the only feature. I trained the model on Google Colab; you can see the training code [here.](https://github.com/carolmanderson/food/blob/master/notebooks/modeling/Train_basic_LSTM_model.ipynb)
 
 ## Model Performance
-The best dev set F1 score was achieved after three training epochs; I allowed model training to continue until ten epochs had occurred without a score improvement, for a total of 13 epochs. 
+The best dev set F1 score was achieved after five training epochs with a batch size of four; I allowed model training to continue until ten epochs had occurred without a score improvement, for a total of 15 epochs. 
 
-The best checkpoint achieved scores on the dev set of both precision and recall of 98.7. However, I think this is an overestimate because of a caveat in how I split the data. I used individual sentences as training examples. When I split the data into training, dev, and test sets, I ignored which document each sentence originally came from, meaning that some of the sentences in the dev set were from recipes whose other sentences may have appeared in the training set. It would be fairer to make the train/test/split _by document_, because different sentences in the same recipe are likely to mention the same foods — possibly allowing the model to memorize food terms, instead of learning general linguistic patterns associated with food. 
-
+The best checkpoint achieved scores on the dev set of both precision and recall of 92% when evaluated at the entity level (i.e., the exact beginning and end of each `FOOD` entity must match the ground truth labels in order to count as a true postive). 
+ 
 ## Next steps
 Even though this model is simple, it works pretty well. Error analysis shows that the most common errors it makes are `BIO` errors. To understand what these are, you need to know that the tags the model predicts are `B-FOOD`, `I-FOOD`, and `O`. `B-FOOD` indicates a token that is the first token in a food mention (B=beginning). `I-FOOD` is a second or later token in a food mention (I=inside). `O` is a token that isn't part of a food mention (O=outside). The model's most common error type is predicting `I-FOOD` for a token that should be `B-FOOD`, or vice-versa. A conditional random field (CRF) layer would probably help reduce this type of error, since it predicts the most probable sequence of labels. A CRF can learn, for example, that I-FOOD should never occur immediately after O.
 
