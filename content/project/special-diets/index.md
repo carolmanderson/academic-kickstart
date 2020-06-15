@@ -141,11 +141,11 @@ After model selection, feature selection, and hyperparameter tuning, I trained t
 
 |  Label     | Precision| Recall | F1-Score |Support |
 | ----------| ----------|----------|----------|----------|
-|`Non-gluten-free`|0.70|0.88|0.78|1064|
+|`Non-gluten-free` |0.70|0.88|0.78|1064|
 |`Gluten-free`    |0.85|0.65|0.73|1141|
-|`Non-kosher`|0.68|0.78|0.72| 954|
+|`Non-kosher` |0.68|0.78|0.72| 954|
 |`Kosher`    |0.81|0.71|0.76|1251|
-|`Non-vegan`|0.91|0.98|0.95|1767|
+|`Non-vegan` |0.91|0.98|0.95|1767|
 |`Vegan`    |0.89|0.62|0.73| 438|
 
 ## Error analysis
