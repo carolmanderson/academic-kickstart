@@ -39,7 +39,7 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-As a demonstration project for Named Entity Recognition, I trained a model to extract food mentions from recipes. To play with the trained model, see the web app [here](http://54.213.148.85:8501). I built the app using the python library Streamlit, and deployed it on AWS.
+As a toy Named Entity Recognition project, I trained a model to extract food mentions from recipes. To play with the trained model, see the web app [here](http://54.213.148.85:8501). I built the app using the python library Streamlit, and deployed it on AWS.
 
 
 
