@@ -76,6 +76,6 @@ The figure below shows a simple example — I used 32 documents sampled from a r
 
 Yes it does! In an experiment with a real training data set, using a batch size of 16, I found that my training time per epoch was 61 seconds with smart batching, compared to 115 seconds with random batching. It almost cut training time in half! The speed benefit will, of course, vary depending on the distribution of document lengths in the data set and the minibatch size. The benefit is greatest when the data set contains a mixture of very short and very long documents.
 
-## The code: 
+## The Code: 
 
 <script src="https://gist.github.com/carolmanderson/df37ae58c58231e74bffee6571b26f97.js"></script>
