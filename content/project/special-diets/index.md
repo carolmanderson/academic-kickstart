@@ -120,7 +120,7 @@ Because the gluten-free and vegan categories were still imbalanced after downsam
 ##### Unweighted
 |  Label     | Precision| Recall | F1-Score |Support |
 | ----------| ----------|----------|----------|----------|
-|`Non-vegan`|0.94|0.96|0.95|1896|
+|`Non-vegan` |0.94|0.96|0.95|1896|
 |`Vegan`    |0.69|0.60|0.64| 308|
 |accuracy|     |    |0.91|2204|
 |macro avg|0.81|0.78|0.79|2204|
@@ -129,7 +129,7 @@ Because the gluten-free and vegan categories were still imbalanced after downsam
 ##### Weighted
 |  Label     | Precision| Recall | F1-Score |Support |
 | ----------| ----------|----------|----------|----------|
-|`Non-vegan`|0.98|0.89|0.93|1896|
+|`Non-vegan` |0.98|0.89|0.93|1896|
 |`Vegan`    |0.57|0.87|0.69| 308|
 |accuracy|     |    |0.89|2204|
 |macro avg|0.77|0.88|0.81|2204|
